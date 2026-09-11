@@ -26,13 +26,21 @@
       <span>Seu resultado {{ result }} kWh</span>
       <span>Sua casa é muito eficiente no consumo de energia!</span>
       {% elif result > 150 and result < 300 %}
+      <span> escreva o relatorio</span>
+      <a href="{{ url_for('form') }}">Link</a>
       <img class="rez__img" src="/static/img/planet_medium.svg" alt="">
       <span>Seu resultado {{ result }} kWh</span>
       <span>A eficiência energética da sua casa é média.</span>
+      <span> escreva o relatorio</span>
+      <a href="{{ url_for('form') }}">Link</a>
+      <img class="rez__img" src="/static/img/planet_medium.svg" alt="">
       {% else %}
       <img class="rez__img" src="/static/img/planet_bad.svg" alt="">
       <span>Seu resultado {{ result }} kWh</span>
       <span>A eficiência energética da sua casa está abaixo da média.</span>
+      <span> escreva o relatorio</span>
+      <a href="{{ url_for('form') }}">Link</a>
+      <img class="rez__img" src="/static/img/planet_medium.svg" alt="">
       {% endif %}
     </div>
     {% endblock %}
